@@ -1,0 +1,160 @@
+Executive Business Report
+
+Sales Forecasting & Demand Intelligence System
+
+Executive Summary
+
+This project analyzes historical retail sales data to understand
+business performance, identify seasonal trends, forecast future demand,
+detect unusual sales patterns, and segment products based on demand
+characteristics. The analysis combines exploratory data analysis,
+time-series forecasting, anomaly detection, and machine learning
+techniques to support better inventory planning and business
+decision-making.
+
+The dataset covers sales transactions across multiple regions, product
+categories, and sub-categories. Throughout the analysis, clear upward
+sales trends, recurring seasonal patterns, and differences in regional
+and category performance were observed. Forecasting models were
+evaluated using MAE, RMSE, and MAPE, while anomaly detection highlighted
+exceptional sales events that deserve further business investigation.
+
+------------------------------------------------------------------------
+
+Business Performance Analysis
+
+Overall Sales Trend
+
+The monthly sales trend shows that business performance generally
+improved over time. Although individual months experienced fluctuations,
+the long-term trend continued to increase, indicating healthy business
+growth. Sales reached their highest levels during the later part of the
+dataset, suggesting improved customer demand and stronger market
+performance.
+
+The time-series decomposition further confirmed three important
+characteristics:
+
+• A positive long-term trend indicating business growth. • Strong
+seasonal behaviour where similar sales patterns repeat every year. •
+Random residual variations caused by promotions, customer demand
+changes, and external business factors.
+
+The Augmented Dickey-Fuller (ADF) test confirmed that the sales series
+is stationary after differencing, making it suitable for forecasting
+models.
+
+------------------------------------------------------------------------
+
+Category Analysis
+
+Technology generated the highest total sales among all product
+categories, making it the strongest revenue contributor. Furniture also
+maintained consistent sales performance throughout the period, while
+Office Supplies demonstrated stable demand with moderate fluctuations.
+
+Monthly category analysis showed that all three categories experienced
+seasonal peaks during high-demand periods, especially towards the end of
+each year. These seasonal increases indicate opportunities for targeted
+inventory planning and promotional campaigns.
+
+------------------------------------------------------------------------
+
+Regional Analysis
+
+The West region recorded the highest overall sales, followed closely by
+the East region. Central and South regions generated comparatively lower
+revenue, indicating potential opportunities for market expansion or
+regional marketing initiatives.
+
+Average shipping time remained close to four days across all regions,
+suggesting that logistics performance was relatively consistent
+regardless of location.
+
+------------------------------------------------------------------------
+
+Forecasting Results
+
+Three forecasting techniques were evaluated:
+
+• SARIMA • Prophet • XGBoost
+
+The model comparison produced the following results:
+
+XGBoost MAE : 14868.07 RMSE : 18606.31 MAPE : 14.56%
+
+SARIMA MAE : 18031.40 RMSE : 19009.18 MAPE : 18.97%
+
+Prophet MAE : 40970.33 RMSE : 53868.95 MAPE : 40.04%
+
+Among all models, XGBoost achieved the lowest forecasting error, making
+it the recommended model for future sales prediction. SARIMA also
+performed reasonably well, whereas Prophet produced comparatively larger
+prediction errors for this dataset.
+
+------------------------------------------------------------------------
+
+Anomaly Detection
+
+Isolation Forest successfully identified unusual weekly sales
+observations. Several significant spikes and drops were detected
+throughout the dataset, particularly during promotional periods and the
+final months of the observation period.
+
+These anomalies may represent:
+
+• Festival or holiday sales • Marketing campaigns • Inventory shortages
+• Exceptional customer demand • Operational disruptions
+
+Monitoring these events can help management understand unusual business
+behaviour and improve future planning.
+
+------------------------------------------------------------------------
+
+Product Demand Segmentation
+
+K-Means clustering grouped product sub-categories into four demand
+segments:
+
+• High Volume Stable • Growing Demand • Low Volume • Declining
+
+Products such as Copiers and Machines were identified as high-value
+items, while several other sub-categories belonged to growing or stable
+demand groups. This segmentation provides valuable guidance for
+inventory optimization.
+
+Recommended actions include:
+
+• Maintain higher inventory for high-volume products. • Increase stock
+gradually for growing-demand products. • Closely monitor low-volume
+items. • Reduce inventory for declining products to minimize holding
+costs.
+
+------------------------------------------------------------------------
+
+Business Recommendations
+
+1.  Deploy the XGBoost forecasting model for operational demand
+    forecasting.
+2.  Prioritize inventory planning for Technology products and the West
+    region.
+3.  Investigate detected anomalies to understand promotional and
+    seasonal impacts.
+4.  Use product clusters to optimize warehouse storage and replenishment
+    policies.
+5.  Continue monitoring seasonal trends to prepare inventory before peak
+    demand periods.
+
+------------------------------------------------------------------------
+
+Conclusion
+
+The project successfully integrates data analysis, forecasting, anomaly
+detection, and machine learning into a unified business intelligence
+solution. The results indicate sustained business growth, clear seasonal
+demand patterns, and opportunities for improved inventory planning.
+
+By implementing the XGBoost forecasting model together with anomaly
+monitoring and product segmentation, the organization can improve
+forecasting accuracy, reduce inventory costs, and make more informed
+strategic decisions.
